@@ -1,9 +1,12 @@
+import { useEffect } from "react";
 import StudentTable from "./StudentTable";
 
 
 
-function StudentList({students,setStudents}) {
-    
+function StudentList({students,setStudents,getStudents}) {
+    useEffect(()=>{
+        getStudents()
+    },[])
     
     return (
         <>
